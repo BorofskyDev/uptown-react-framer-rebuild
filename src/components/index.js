@@ -1,0 +1,8 @@
+export {default as About} from './About'
+export {default as Contact} from './Contact'
+export {default as Features} from './Features'
+export {default as Fees} from './Fees'
+export {default as Floorplans} from './Floorplans'
+export {default as Gallery} from './Gallery'
+export {default as Hero} from './Hero'
+export {default as Navbar} from './Navbar'
