@@ -7,26 +7,27 @@ const NavLinksContainer = styled.div`
 `
 
 const LinksWrapper = styled.ul`
+  height: 100%;
   margin: 0;
   padding: 0;
   display: flex;
-  height: 100%;
   list-style: none;
 `
 
 const LinkItem = styled.li`
   height: 100%;
   padding: 0 1.1em;
-  color: #222;
+  color: hsl(var(--clr-white));
   font-weight: 500;
   font-size: 14px;
+  text-transform: uppercase;
   align-items: center;
   justify-content: center;
   display: flex;
   border-top: 2px solid transparent;
   transition: all 220ms ease-in-out;
   &:hover {
-    border-top: 2px solid #2ecc71;
+    border-top: 2px solid hsl(var(--clr-primary));
   }
 `
 
@@ -41,16 +42,16 @@ function NavLinks() {
     <NavLinksContainer>
       <LinksWrapper>
         <LinkItem>
-          <Link href='#'>About Us</Link>
+          <Link href='#'>About</Link>
         </LinkItem>
         <LinkItem>
-          <Link href='#'>How it works</Link>
+          <Link href='#'>Features</Link>
         </LinkItem>
         <LinkItem>
-          <Link href='#'>Explore</Link>
+          <Link href='#'>Floorplans</Link>
         </LinkItem>
         <LinkItem>
-          <Link href='#'>Impact</Link>
+          <Link href='#'>Gallery</Link>
         </LinkItem>
       </LinksWrapper>
     </NavLinksContainer>

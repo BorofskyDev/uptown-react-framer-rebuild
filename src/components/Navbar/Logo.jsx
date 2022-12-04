@@ -5,12 +5,12 @@ const LogoWrapper = styled.div`
   align-items: center;
 `
 
-const LogoText = styled.h2`
+const LogoText = styled.h3`
   margin: 0;
   margin-left: 0.25em;
   font-weight: 500;
   text-transform: uppercase;
-  text-shadow: 0 0 0.125em #000000, 0 0 1.25em #142b4d;
+  text-shadow: 0 0 0.125em #000000, 0 0 1.25em hsl(var(--clr-accent));
 `
 
 function Logo() {

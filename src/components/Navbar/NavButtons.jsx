@@ -1,57 +1,66 @@
 import styled from 'styled-components'
 
-const AccessibilityContainer = styled.div`
+const ButtonsContainer = styled.div`
   display: flex;
-  margin-left: 10px;
+  margin-left: 0.625em;
 `
 
 const RegisterButton = styled.button`
-  border: 0;
-  outline: 0;
-  padding: 8px 1em;
+  padding: 0.5em 1em;
   color: #fff;
-  font-size: 13px;
+  font-size: 0.8125em;
   font-weight: 600;
-  border-radius: 20px;
-  background-color: #6adf76;
-  background-image: linear-gradient(to right, transparent 0%, #00c9ff 100%);
+  text-transform: uppercase;
+  border: 0.0625em solid hsl(var(--clr-primary));
+  border-radius: 0.3125em;
+  background-color: transparent;
+  background-image: linear-gradient(
+    to right,
+    transparent 0%,
+    hsl(var(--clr-primary)) 100%
+  );
   transition: all 240ms ease-in-out;
   cursor: pointer;
-  &:hover {
-    background-color: #00c9ff;
+  &:hover,
+  &:focus {
+    background-color: hsl(var(--clr-primary));
   }
   &:not(:last-of-type) {
-    margin-right: 7px;
+    margin-right: 1em;
   }
 `
 
 const LoginButton = styled.button`
-  border: 0;
-  outline: 0;
-  padding: 8px 1em;
-  color: #222;
-  font-size: 13px;
+  padding: 0.5em 1em;
+  color: #fff;
+  font-size: 0.8125em;
   font-weight: 600;
-  border-radius: 20px;
+  text-transform: uppercase;
+  border: 0.0625em solid hsl(var(--clr-accent));
+  border-radius: 0.3125em;
   background-color: transparent;
-  border: 2px solid #00c9ff;
+  background-image: linear-gradient(
+    to right,
+    transparent 0%,
+    hsl(var(--clr-accent)) 100%
+  );
   transition: all 240ms ease-in-out;
   cursor: pointer;
   &:hover {
     color: #fff;
-    background-color: #00c9ff;
+    background-color: hsl(var(--clr-accent));
   }
   &:not(:last-of-type) {
-    margin-right: 7px;
+    margin-right: 1em;
   }
 `
 
 function NavButtons() {
   return (
-    <AccessibilityContainer>
-      <RegisterButton>Register</RegisterButton>
-      <LoginButton>Login</LoginButton>
-    </AccessibilityContainer>
+    <ButtonsContainer>
+      <RegisterButton>Contact</RegisterButton>
+      <LoginButton>Resident Portal</LoginButton>
+    </ButtonsContainer>
   )
 }
 
