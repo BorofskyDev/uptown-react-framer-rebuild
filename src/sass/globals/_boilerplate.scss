@@ -96,7 +96,7 @@ a {
 body {
   font-family: var(--text);
   font-size: var(--400);
-  background-color: hsl(var(--clr-dark));
+  background-color: hsl(var(--clr-dark) / 0.9 );
   color: hsl(var(--clr-white));
   line-height: 1.2;
 }
