@@ -1,55 +1,46 @@
-export default function Navbar() {
+import styled from 'styled-components'
+import { useMediaQuery } from 'react-responsive'
+import { Logo, MenuToggle, MobileNavLinks, NavLinks, NavButtons } from './Navbar/index'
+import { DeviceSize } from './utils/responsive'
+
+const NavbarContainer = styled.div`
+  width: 100%;
+  height: 3.75em;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5em;
+  box-shadow: 0 0.0625em 0.1875em rgba(0, 0, 0, 0.8);
+`
+const LeftSection = styled.div`
+  display: flex;
+`
+
+const MiddleSection = styled.div`
+  height: 100%;
+  display: flex;
+  flex: 2;
+  justify-content: center;
+`
+
+const RightSection = styled.div`
+  display: flex;
+`
+
+function Navbar() {
+  const isMobile = useMediaQuery({ maxWidth: DeviceSize.mobile })
+
   return (
-    <header className='Navbar'>
-      <div className='Navbar__left-section'>
-        <div className='Navbar__left-section--logo'>
-          <span>Uptown Landing</span>
-        </div>
-      </div>
-      <div className='Navbar__middle-section'>
-        <div className='Navbar__links-container'>
-          <ul className='Navbar__links-container--links-wrapper'>
-            <li className='Navbar__links-container--links-wrapper__link-item'>
-              <a
-                href='#'
-                className='Navbar__links-container--links-wrapper__link-item--link'
-              >
-                About
-              </a>
-            </li>
-            <li className='Navbar__links-container--links-wrapper__link-item'>
-              <a
-                href='#'
-                className='Navbar__links-container--links-wrapper__link-item--link'
-              >
-                Features
-              </a>
-            </li>
-            <li className='Navbar__links-container--links-wrapper__link-item'>
-              <a
-                href='#'
-                className='Navbar__links-container--links-wrapper__link-item--link'
-              >
-                Floorplans
-              </a>
-            </li>
-            <li className='Navbar__links-container--links-wrapper__link-item'>
-              <a
-                href='#'
-                className='Navbar__links-container--links-wrapper__link-item--link'
-              >
-                Gallery
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className='Navbar__right-section'>
-        <button className='Navbar__right-section--contact-btn'>Contact</button>
-        <button className='Navbar__right-section--portal-btn'>
-          Resident Portal
-        </button>
-      </div>
-    </header>
+    <NavbarContainer>
+      <LeftSection>
+        <Logo />
+      </LeftSection>
+      <MiddleSection>{!isMobile && <NavLinks />}</MiddleSection>
+      <RightSection>
+        {!isMobile && <NavButtons />}
+        {isMobile && <MobileNavLinks />}
+      </RightSection>
+    </NavbarContainer>
   )
 }
+
+export default Navbar
