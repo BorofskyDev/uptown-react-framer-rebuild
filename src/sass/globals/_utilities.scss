@@ -1,18 +1,20 @@
 .section-container {
-    min-height: 50vh;
-    max-width: 1360px;
-    margin: 0 auto;
-    padding: 0 1em;
+  min-height: 50vh;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 1em;
 }
 
 .title {
-    font-family: var(--heading);
-    font-size: var(--fs-700);
-    line-height: 1.3;
-    padding: 0.5em 0.2em;
-    text-transform: uppercase;
-    text-align: center;
-    text-shadow: 0 0 12px hsl(var(--clr-accent)), 0 0 12px hsl(var(--clr-white));
+  overflow: hidden;
+  font-family: var(--heading);
+  font-size: var(--fs-700);
+  line-height: 1.3;
+  margin-top: 1em;
+  padding: 0.5em 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 0 12px hsl(var(--clr-accent)), 0 0 12px hsl(var(--clr-white));
 }
 
 .divider {
