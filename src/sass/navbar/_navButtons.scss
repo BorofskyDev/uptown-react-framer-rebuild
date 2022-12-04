@@ -1,6 +1,7 @@
 .Buttons-container {
   display: flex;
   margin-left: 0.625em;
+  z-index: 99;
 
   &__contact-btn {
     padding: 0.5em 1em;
