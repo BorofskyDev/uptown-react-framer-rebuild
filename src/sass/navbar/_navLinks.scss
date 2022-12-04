@@ -1,0 +1,37 @@
+.Nav-links {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  &__links-wrapper {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+
+    &--link-item {
+      height: 100%;
+      padding: 0 1.1em;
+      color: hsl(var(--clr-white));
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: uppercase;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      border-top: 2px solid transparent;
+      transition: all 220ms ease-in-out;
+
+      &:hover {
+        border-top: 2px solid hsl(var(--clr-primary));
+      }
+
+      &__link {
+        text-decoration: none;
+        color: inherit;
+        font-size: inherit;
+      }
+    }
+  }
+}

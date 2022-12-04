@@ -1,0 +1,12 @@
+.Logo {
+  display: flex;
+  align-items: center;
+
+  &__text {
+    margin: 0;
+    margin-left: 0.25em;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-shadow: 0 0 0.125em #000000, 0 0 1.25em hsl(var(--clr-accent));
+  }
+}
