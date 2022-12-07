@@ -7,7 +7,8 @@
   background-color: hsl(var(--clr-dark));
   padding: 0 1.5em;
   box-shadow: 0 0.0625em 0.1875em rgba(0, 0, 0, 0.8);
-
+  z-index: 100;
+  
   &__left-section {
     display: flex;
   }
