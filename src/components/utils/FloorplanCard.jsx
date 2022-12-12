@@ -1,16 +1,18 @@
 import { useState } from 'react'
 import { GiExpand, GiBed, GiBathtub, GiVideoCamera } from 'react-icons/gi'
 import { BsCurrencyDollar } from 'react-icons/bs'
-import FloorplanModal from './FloorplanModal'
 
 function FloorplanCard(props) {
-  const { imageUrl, title, size, bedrooms, bathrooms, rent, tourUrl } = props
-  const [floorplanModal, setfloorplanModal] = useState(false)
-
-  function openModal() {
-    console.log(props.id)
-    setfloorplanModal(!floorplanModal)
-  }
+  const {
+    openModal,
+    imageUrl,
+    title,
+    size,
+    bedrooms,
+    bathrooms,
+    rent,
+    tourUrl,
+  } = props
 
   return (
     <div className='Floorplans__card'>
@@ -19,11 +21,6 @@ function FloorplanCard(props) {
         alt={title}
         onClick={openModal}
         className='Floorplans__card--img'
-      />
-      <FloorplanModal
-        props={props}
-        toggle={floorplanModal}
-        action={openModal}
       />
       <h3 className='Floorplans__card--title'>{title}</h3>
       <p className='Floorplans__card--card-content'>
