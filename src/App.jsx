@@ -17,7 +17,7 @@ function App() {
       <About />
       <Features />
       <Floorplans />
-      {/* <Fees /> */}
+      <Fees />
       {/* <Gallery /> */}
       {/* <Contact /> */}
     </>

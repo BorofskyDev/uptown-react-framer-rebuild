@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { GiExpand, GiBed, GiBathtub, GiVideoCamera } from 'react-icons/gi'
 import { BsCurrencyDollar } from 'react-icons/bs'
 import divider from '../assets/divider.webp'
@@ -6,6 +7,12 @@ import bdr2 from '../assets/apt-imgs/2bdr/2-bedroom-floorplan.webp'
 import bdr3 from '../assets/apt-imgs/3bdr/3-bedroom-floorplan.webp'
 
 export default function Floorplans() {
+  const [modalState, setModalstate] = useState(false)
+
+  function openModal() {
+    setModalstate(!modalState)
+  }
+
   return (
     <section className='Floorplans section-container' id='floorplans'>
       <img src={divider} alt='' className='divider' />
@@ -44,6 +51,7 @@ export default function Floorplans() {
             src={bdr2}
             alt='Two bedroom floorplan'
             className='Floorplans__card--img'
+            
           />
           <h3 className='Floorplans__card--title'>2 Bedroom</h3>
           <p className='Floorplans__card--card-content'>
