@@ -16,6 +16,7 @@
   &.active {
     visibility: visible;
     opacity: 1;
+    z-index: 999;
     transform: scale(1);
     transition: all 500ms linear;
   }
@@ -23,7 +24,7 @@
   &__modal {
     width: 90%;
     height: 90%;
-    z-index: 100;
+    z-index: 1000;
     overflow: auto;
     margin-bottom: 3em;
     background-color: hsl(var(--bg-primary) / 0.8);

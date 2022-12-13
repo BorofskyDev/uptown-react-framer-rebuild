@@ -7,7 +7,7 @@ import { useState } from 'react'
 export default function Floorplans() {
   const [floorplanModal, setFloorplanModal] = useState(false);
   const cards = data.map((item) => {
-    return <FloorplanCard key={item.id} {...item} />
+    return <FloorplanCard key={item.id} {...item} openModal={openModal} />
   })
 
   function openModal() {
@@ -17,7 +17,7 @@ export default function Floorplans() {
 
   return (
     <section className='Floorplans section-container' id='floorplans'>
-      <img src={divider} alt='' className='divider' />
+      <img src={divider} alt='' className='divider'/>
       <div className='title'>Floorplans</div>
       <div className='Floorplans__card-container'>
         {cards}
